@@ -1,0 +1,209 @@
+/* === Match global look from style.css === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Header + Nav (exact match with style.css) */
+header {
+  background: #f8f9fa;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #fff;
+  background: #0077b5;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 50px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 span {
+  color: #6c63ff;
+}
+.hero-text .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-img img {
+  width: 250px;
+  border-radius: 50%;
+}
+/* Footer (same as style.css) */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  margin-top: 30px;
+}
+.card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.card .btn:hover {
+  background: #5147d9;
+}
+
+/* === Academics Section === */
+.academics {
+  padding: 50px;           /* matches .cards-section spacing */
+  text-align: center;
+}
+
+.academics h2 {
+  margin: 0;
+}
+
+/* Table styled to feel like a “card” */
+.academics table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden; /* keep rounded corners on header */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.academics thead th {
+  background: #0077b5; /* portfolio accent */
+  color: #fff;
+  text-align: center;
+  padding: 14px 12px;
+}
+
+.academics tbody td {
+  padding: 14px 12px;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.academics tbody tr:nth-child(even) {
+  background: #f8f9fa; /* subtle alt row like cards bg */
+}
+
+/* Optional note under table */
+.note {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* === Skills Section — make cards match site cards === */
+.skills {
+  padding: 50px;           /* same spacing as .cards-section */
+  text-align: center;
+}
+
+.skills h2 {
+  margin: 0;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;        /* same as .cards margin-top */
+}
+
+/* Make skill cards visually identical to .card from style.css */
+.skill-card {
+  background: #f8f9fa;     /* same card bg */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  text-align: left;        /* optional: keep headings left like content cards */
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings inside cards—match tone */
+.skill-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* If you ever add a button inside skill cards, match global button */
+.skill-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.skill-card .btn:hover {
+  background: #5147d9;
+}
+
+/* Responsive tweaks (optional) */
+@media (max-width: 600px) {
+  header {
+    padding: 12px 20px;
+  }
+  .academics, .skills {
+    padding: 30px 20px;
+  }
+}
